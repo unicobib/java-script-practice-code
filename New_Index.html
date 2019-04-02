@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="new_js.js"></script>
+</head>
+
+<body class='container'>
+    <div class='jumbotron jumbotron-fluid'>
+        <h1 class='col-sm-4' style='text-align: center'>Task List</h1>
+    </div>
+    <div class="row">
+        <!-- <div class='col-sm-6' style="width:50%; height:100%">
+            <div class='jumbotron jumbotron-fluid'></div>
+        </div>
+        <div class='col-sm-6' style="width:50%;height:100%">
+            <div class='jumbotron jumbotron-fluid'></div>
+        </div> -->
+        <div class="col-sm-2">
+            <div class="btn btn-primary" onclick="addItem()"><strong>Add Task</strong>  <span class="glyphicon glyphicon-plus"></span></div>
+        </div>
+        <br>
+        <div class="card-action">
+        <div class="task-title">
+            <p>Task</p>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <ul class="list-group">
+                    <li class="list-group-item">Item1
+                        <a href="#" class="delete-item secondery-content">
+                            <i class="fa fa-remove"></i>
+                        </a>
+                    </li>
+                    <!-- <i class="glyphicon glyphicon-trash"></i> -->
+                    <li class="list-group-item">Item2</li>
+                    <li class="list-group-item">Item3</li>
+                    <li class="list-group-item">Item4</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
