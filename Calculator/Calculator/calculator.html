@@ -14,10 +14,12 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <style>
-        td{
-            -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
-             -moz-column-gap: 40px; /* Firefox */
-             column-gap: 40px;
+        td {
+            -webkit-column-gap: 40px;
+            /* Chrome, Safari, Opera */
+            -moz-column-gap: 40px;
+            /* Firefox */
+            column-gap: 40px;
 
         }
     </style>
@@ -27,66 +29,40 @@
 
     <body>
         <div class="container container-fluid">
-
-            <table>
-                
+            <table border="2">
                 <tr>
-                <th>
-                    <input type="text" id="result" name="result">
-                </th>
-            </tr>
-            
-                <tr>
-                    <td class="btn btn-primary" style="padding:10px">
-                        1
+                    <td colspan="3">
+                        <input type="text" id="result" />
                     </td>
-                    <td class="btn btn-primary" style="padding:10px">
-                        2
-                    </td>
-                    <td class="btn btn-primary" style="padding:10px">
-                        3
-                    </td>
-                    <td>
-                            <div class="btn btn-danger">/</div>
-                        </td>
+                    <td><input type="button" value="clr" onclick="document.getElementById('result').value='';" ></td>
                 </tr>
                 <tr>
-                    <td>
-                        <div class="btn btn-primary">4</div>
-                    </td>
-                    <td>
-                        <div class="btn btn-primary">5</div>
-                    </td>
-                    <td>
-                        <div class="btn btn-primary">6</div>
-                    </td>
-                    <th>
-                            <div class="btn btn-danger">*</div>
-                        </th>
+                    <td><input type="button" value="1" onclick="action('1')"></td>
+                    <td><input type="button" value="2" onclick="action('2')"></td>
+                    <td><input type="button" value="3" onclick="action('3')"></td>
+                    <td><input type="button" value="/" onclick="action('/')"></td>
                 </tr>
                 <tr>
-                    <td>
-                        <div class="btn btn-primary">7</div>
-                    </td>
-                    <td>
-                        <div class="btn btn-primary">8</div>
-                    </td>
-                    <td>
-                        <div class="btn btn-primary">9</div>
-                    </td>
-                    <th>
-                            <div class="btn btn-danger">-</div>
-                        </th>
+                    <td><input type="button" value="4" onclick="action('4')"></td>
+                    <td><input type="button" value="5" onclick="action('5')"></td>
+                    <td><input type="button" value="6" onclick="action('6')"></td>
+                    <td><input type="button" value="*" onclick="action('*')"></td>
                 </tr>
                 <tr>
-                    <td>
-                        <div class="btn btn-success">=</div>
-                        <div class="btn btn-primary">+</div>
-                    </td>
+                    <td><input type="button" value="7" onclick="action('7')"></td>
+                    <td><input type="button" value="8" onclick="action('8')"></td>
+                    <td><input type="button" value="9" onclick="action('9')"></td>
+                    <td><input type="button" value="-" onclick="action('-')"></td>
                 </tr>
+                <tr>
+                        <td><input type="button" value="." onclick="dot('.')"></td>
+                        <td><input type="button" value="0" onclick="action(0)"></td>
+                        <td><input type="button" value="=" onclick="calculate('=')"></td>
+                        <td><input type="button" value="+" onclick="action('+')"></td>
+                    </tr>
             </table>
 
-        </div>
+            <script src="calculator.js"></script>
     </body>
 
 </body>
