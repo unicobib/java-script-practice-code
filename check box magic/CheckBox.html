@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body onload="f2()">
+
+    <div id="checkbox">
+        <input type="checkbox" id="default" name="default">Select All
+        <input type="checkbox" id="box1" name="box">Box1
+        <input type="checkbox" id="box2" name="box">Box2
+        <input type="checkbox" id="box3" name="box">Box3
+        <input type="checkbox" id="box4" name="box">Box4
+        <input type="checkbox" id="box5" name="box">Box5
+    </div>
+    <script>
+        function f2(){
+            let x = document.querySelectorAll("input[name=box]");
+            x.forEach((ele)=>ele.setAttribute("onchange","f1()"));
+        }
+    </script>
+    <script>
+        document.querySelector("input[name=default]").addEventListener("change",function(){
+            let _default = document.querySelector("#default").checked;
+            let _otherCheckBoxs = document.querySelectorAll("input[name=box]");
+            (_default==true)?_otherCheckBoxs.forEach((ele)=>ele.checked=true):_otherCheckBoxs.forEach((ele)=>ele.checked=false);
+        });
+    </script>
+    <script>
+        function f1(){
+            let _booleanArr = [];
+            let _otherCheckBoxs = document.querySelectorAll("input[name=box]");
+            _otherCheckBoxs.forEach((ele)=>_booleanArr.push(ele.checked));
+            let _isCheck = _booleanArr.every((ele)=>ele==true);
+            (_isCheck==true)?document.querySelector("input[name=default]").checked=true:document.querySelector("input[name=default]").checked=false;
+        }
+    </script>
+</body>
+</html>
